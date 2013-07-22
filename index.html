@@ -1,32 +1,98 @@
 <!DOCTYPE html>
 <html lang="en-us">
    <head>
-      <title>My First Bitstarter</title>
       <meta charset="utf-8">
+      <title>My First Bitstarter</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
       <link type="text/css" rel="stylesheet" href="http://twitter.github.io/bootstrap/assets/css/bootstrap.css">
+      <link type="text/css" rel="stylesheet" href="http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css">
+      <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,800,700' rel='stylesheet' type='text/css'>
 
       <style type="text/css"> 
+         /* Large desktop */
+         @media (min-width : 980px) {
+            body {
+               padding-top: 60px;
+            }
+
+            .linediv-l {
+               border-right: 1px white solid;
+            }
+
+            .linediv-r {
+               border-left: 1px white solid;
+            }
+
+         }
+
+         /* Landscape phone and down */
+         @media (max-width: 480px) {
+
+            .linediv-l {
+               border-bottom: 1px white solid;
+            }
+
+            .linediv-r {
+               border-top: 1px white solid;
+            }
+
+         }
+
+
+         /* All form factors */
+
+         /* Main body and headings */
+
          body {
-            padding-top: 20px;
-            padding-bottom: 40px;
+            font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+            /*padding-top: 20px;
+            padding-bottom: 40px;*/
          }
-         .container {
-            width: 960px;
+
+         .heading, .subheading {
+            font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+            text-align: center;
          }
+
          p.lead {
             padding-top: 15px;
+            font-size: 24px;
+            line-height: 34px;
          }
-         .navigation, .pitch, .section1, .section2, .faq, .footer {
-            padding: 10px 0px 10px 0px;
+
+         /* Video picth and Action */
+         .pitch {
+            padding: 2.5% 0%;
          }
+
+         .order {}
+
+         .actions {
+            background-color: #343434;
+            padding: 3% 0%;
+         }
+
          .video, .thermometer, .order, .social {
             border: 1px dotted;
             text-align: center;
          }
+
+         .statistics h3, .statistics p {
+            color: white;
+         }
+
+         /* OLD STUFF */
+
+         .navigation, .pitch, .section1, .section2, .faq, .footer {
+           /* padding: 10px 0px 10px 0px;*/
+         }
+         
          .video {
             /* Internal border have 1px width, thus need to add 4 x 1px to 120px. */
-            height: 124px;
-            line-height: 124px;
+           /* height: 304px;
+            line-height: 124px;*/
          }
          .thermometer, .order, .social {
             /* line-height to vertically center: http://phrogz.net/css/vertical-align/index.html */
@@ -42,67 +108,91 @@
    </head>
 
    <body>
+
+
+      <!-- Mobile-friendly navbar adapted from example. -->
+      <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
+      <div class="navbar navbar-inverse navbar-fixed-top">
+         <div class="navbar-inner">
+            <div class="container">
+               <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+               </button>
+               <a class="brand" href="#">Project name</a>
+               <div class="nav-collapse collapse">
+                  <ul class="nav">
+                     <li class="active"><a href="#">Home</a></li>
+                     <li><a href="#about">About</a></li>
+                     <li><a href="#contact">Contact</a></li>
+                  </ul>
+               </div><!--/.nav-collapse -->
+            </div>
+         </div>
+      </div>
+
+
       <div class="container">
-         <div class="row navigation">
-            <div class="span2 logo">
-               Logo
-            </div>
-            <div class="span6 blank">
-               Blank
-            </div>
-            <div class="span4 about">
-               About
-            </div>
-         </div>
 
-         <div class="row heading">
+         <div class="row-fluid heading">
             <div class="span12">
-               <h1>Bitstarter Title</h1>
+               <h1>Product</h1>
             </div>
          </div>
 
-         <div class="row subheading">
+         <div class="row-fluid subheading">
             <div class="span12">
                <p class="lead">This is my first bitstarter project.</p>
             </div>
          </div>
 
-         <div class="row pitch">
-            <div class="span6 video">
-               Video
+         <div class="row-fluid pitch">
+            <div class="span5 offset1 video">
+               <img class="img-polaroid" src="http://placehold.it/480x300">
             </div>
-            <div class="span6">
-               <div class="thermometer">
-                  Thermometer
-               </div>
-               <div class="order">
-                  Order
-               </div>
-               <div class="social">
-                  Social
+            <div class="span5 actions">
+               <div class="span8 offset2">
+                  <div class="statistics">
+                     <div class="span4">
+                        <div class="linediv-l">
+                           <h3>1000</h3> <p>backers</p>
+                        </div>
+                     </div>
+                     <div class="span4">
+                        <div class="linediv-c">
+                           <h3>$6000</h3> <p> of $10,000</p>
+                        </div>
+                     </div>
+                     <div class="span4">
+                        <div class="linediv-r">
+                           <h3>10</h3> <p> days left</p>
+                        </div>
+                     </div>
+                  </div>
                </div>
             </div>
          </div>
 
-         <div class="row section1">
+         <div class="row-fluid section1">
             <div class="span12">
                Marketing Section 1
             </div>
          </div>
 
-         <div class="row section2">
+         <div class="row-fluid section2">
             <div class="span12">
                Marketing Section 2
             </div>
          </div>
 
-         <div class="row faq">
+         <div class="row-fluid faq">
             <div class="span12">
                FAQ
             </div>
          </div>
 
-         <div class="row footer">
+         <div class="row-fluid footer">
             <div class="span12">
                Footer
             </div>
